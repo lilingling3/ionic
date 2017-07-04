@@ -5,6 +5,7 @@
 </ion-header>
 
 <ion-content padding>
+
   <h2>Welcome to Ionic!</h2>
   <p>
     This starter project comes with simple tabs-based layout for apps
@@ -14,5 +15,400 @@
     Take a look at the <code>src/pages/</code> directory to add or change tabs,
     update any existing page or create new pages.
   </p>
-  <button (click)="openMenu()">presentActionSheet</button>
+  <h1>ActionSheet 底部弹窗 </h1>
+  <button (click)="openMenu()" ion-button>presentActionSheet</button>
+  <h1>Alert 确认按钮</h1>
+  <button (click)="showBasicAlert()" ion-button>showBasicAlert</button>
+  <button (click)="showPrompt()" ion-button>showPrompt</button>
+  <button (click)="showConfirm()" ion-button>showConfirm</button>
+  <button (click)="showRadio()" ion-button>showRadio</button>
+  <button (click)="showCheckbox()" ion-button>showCheckbox</button>
+
+  <h1>badge 用于数值显示</h1>
+  <ion-badge color="secondary">10k</ion-badge>
+
+  <ion-item>
+    <ion-icon name="logo-twitter" item-start></ion-icon>
+    Followers
+    <ion-badge item-end>260k</ion-badge>
+</ion-item>
+
+<h1>button 在ionic中用于显示简单句子，图标</h1>
+<!--
+  outline 带有边框的透明按钮
+  clear 不带边框的透明按钮
+  round 大圆角
+  block 充满父元素
+-->
+   <button ion-button color="light" round>Light 灰色</button>
+    <button ion-button outline >Default 默认蓝色</button>
+    <button ion-button color="secondary" clear>Secondary 绿色</button>
+    <button ion-button color="danger">Danger 红色</button>
+    <button ion-button color="dark" block>Dark 黑色</button>
+
+    <!-- Float the icon left -->
+  <button ion-button icon-left>
+    <ion-icon name="home"></ion-icon>
+    Left Icon
+  </button>
+
+  <!-- Float the icon right -->
+  <button ion-button icon-right>
+    Right Icon
+    <ion-icon name="home"></ion-icon>
+  </button>
+
+  <!-- Only icon (no text) -->
+  <button ion-button icon-only>
+    <ion-icon name="home"></ion-icon>
+  </button>
+<h1>ion-card</h1>
+   <!-- ion=card  有头部跟 内容-->
+   <ion-card>
+      <ion-card-header>
+        Header
+      </ion-card-header>
+
+      <ion-card-content>
+        The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
+      </ion-card-content>
+
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      Explore Nearby
+    </ion-card-header>
+
+    <ion-list>
+      <button ion-item>
+        <ion-icon name="cart" item-start></ion-icon>
+        Shopping
+      </button>
+
+      <button ion-item>
+        <ion-icon name="medical" item-start></ion-icon>
+        Hospital
+      </button>
+
+      <button ion-item>
+        <ion-icon name="cafe" item-start></ion-icon>
+        Cafe
+      </button>
+
+      <button ion-item>
+        <ion-icon name="paw" item-start></ion-icon>
+        Dog Park
+      </button>
+
+      <button ion-item>
+        <ion-icon name="beer" item-start></ion-icon>
+        Pub
+      </button>
+
+      <button ion-item>
+        <ion-icon name="planet" item-start></ion-icon>
+        Space
+      </button>
+
+    </ion-list>
+</ion-card>
+
+<ion-card>
+  <img src="assets/img/card-saopaolo.png"/>
+
+  <ion-card-content>
+    <ion-card-title>
+      Nine Inch Nails Live
+      </ion-card-title>
+    <p>
+      The most popular industrial group ever, and largely
+      responsible for bringing the music to a mass audience.
+    </p>
+
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+
+  <ion-item>
+    <!--图像-->
+    <ion-avatar item-start>
+      <img src="assets/img/marty-avatar.png">
+    </ion-avatar>
+    <h2>Marty McFly</h2>
+    <p>November 5, 1955</p>
+  </ion-item>
+
+  <img src="assets/img/card-saopaolo.png">
+
+  <ion-card-content>
+    <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+  </ion-card-content>
+
+  <ion-row>
+
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>12 Likes</div>
+      </button>
+    </ion-col>
+
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>4 Comments</div>
+      </button>
+    </ion-col>
+
+    <ion-col center text-center>
+      <ion-note>
+        11h ago
+      </ion-note>
+    </ion-col>
+
+  </ion-row>
+
+</ion-card>
+
+<ion-card>
+
+  <img src="assets/img/card-saopaolo.png">
+  <!--ion-fab 在屏幕 的右上方-->
+  <ion-fab right top>
+    <button ion-fab>
+      <ion-icon name="pin"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <ion-item>
+    <ion-icon name="football" item-start large></ion-icon>
+    <h2>Museum of Football</h2>
+    <p>11 N. Way St, Madison, WI 53703</p>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name="wine" item-left large ></ion-icon>
+    <h2>Institute of Fine Cocktails</h2>
+    <p>14 S. Hop Avenue, Madison, WI 53703</p>
+  </ion-item>
+
+  <ion-item>
+    <span item-left>18 min</span>
+    <span item-left>(2.6 mi)</span>
+    <button ion-button icon-left clear item-end>
+      <ion-icon name="navigate"></ion-icon>
+      Start
+    </button>
+  </ion-item>
+
+</ion-card>
+ <h1>CheckBox 复选框</h1>
+
+  <ion-item>
+    <ion-label>Daenerys Targaryen</ion-label>
+    <ion-checkbox color="dark" checked="true" (ionChange)='change()'></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Arya Stark</ion-label>
+    <ion-checkbox disabled="true" ></ion-checkbox>
+  </ion-item>
+  <h1>Date time</h1>
+    <ion-item>
+      <ion-label>Start Time</ion-label>
+      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A"></ion-datetime>
+    </ion-item>
+<h1>ion-fab</h1>
+    <ion-fab top right edge>
+    <button ion-fab mini><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list>
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-fab right bottom>
+    <button ion-fab color="light"><ion-icon name="arrow-dropleft"></ion-icon></button>
+    <ion-fab-list side='left'>
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+<h1>ion-grid</h1>
+  <ion-grid width-10>
+  <ion-row>
+    <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+      This column will be 12 columns wide by default,
+      9 columns at the small breakpoint,
+      6 at the medium breakpoint, 4 at large, and 3 at xl.
+    </ion-col>
+  </ion-row>
+</ion-grid>
+<h1>ion-icon</h1>
+<ion-icon name="heart"></ion-icon>
+<ion-icon name="heart" isActive="false"></ion-icon>
+<ion-icon name="star" ></ion-icon>
+<ion-icon ios="ios-home" md="md-home"></ion-icon>
+
+<h1>input </h1>
+<ion-list>
+
+  <ion-item >
+    <!--<ion-label fixed>Username</ion-label>-->
+    <ion-input type="text" value="" placeholder="Username"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <!--<ion-label fixed>Password</ion-label>-->
+    <ion-input type="password" placeholder="password"></ion-input>
+  </ion-item>
+<h1>ion-list</h1>
+</ion-list>
+
+    <div >
+      <button ion-button block >sign in </button>
+    </div>
+
+
+  <ion-list>
+
+    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+      {{ item }}
+    </button>
+
+  </ion-list>
+<!-- 使用ion-item-group 代替 ion-list -->
+
+    <ion-item-group>
+      <ion-item-divider color="light">A</ion-item-divider>
+      <ion-item>Angola</ion-item>
+      <ion-item>Argentina</ion-item>
+    </ion-item-group>
+
+    <ion-list>
+      <ion-list-header>
+        Action
+      </ion-list-header>
+
+        <ion-item>Terminator II</ion-item>
+        <ion-item>The Empire Strikes Back</ion-item>
+        <ion-item>Blade Runner</ion-item>
+
+         <ion-item>
+           <ion-icon name="leaf" item-start></ion-icon>
+           Herbology
+          <ion-icon name="rose" item-end></ion-icon>
+        </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/img/marty-avatar.png">
+        </ion-avatar>
+        <h2>Cher</h2>
+        <p>Ugh. As if.</p>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="assets/img/marty-avatar.png">
+        </ion-avatar>
+        <h2>Finn</h2>
+        <h3>Don't Know What To Do!</h3>
+        <p>I've had a pretty messed up day. If we just...</p>
+      </ion-item>
+  </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="assets/img/marty-avatar.png">
+        </ion-thumbnail>
+        <h2>Finn</h2>
+        <h3>Don't Know What To Do!</h3>
+        <p>I've had a pretty messed up day. If we just...</p>
+        <button ion-button clear item-end>View</button>
+      </ion-item>
+  </ion-list>
+<h1>loading</h1>
+<button ion-button round (click)='presentLoading()'>loading</button>
+<button ion-item> button ion-item</button>
+<a ion-item (click)='goPage()'> 调转到 list页面</a>
+<ion-item>ion-item</ion-item>
+
+<!--可滑动 的 list -->
+<ion-list>
+  <ion-item-sliding>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/img/marty-avatar.png">
+      </ion-avatar>
+      <h2>Slimer</h2>
+    </ion-item>
+    <ion-item-options side="left">
+      <button ion-button color="primary">
+        <ion-icon name="text"></ion-icon>
+        Text
+      </button>
+      <button ion-button color="secondary">
+        <ion-icon name="call"></ion-icon>
+        Call
+      </button>
+    </ion-item-options>
+    <ion-item-options side="right">
+      <button ion-button color="primary">
+        <ion-icon name="mail"></ion-icon>
+        Email
+      </button>
+    </ion-item-options>
+  </ion-item-sliding>
+</ion-list>
+
+<h1>radio</h1>
+
+<ion-list radio-group>
+  <ion-list-header>
+    Language
+  </ion-list-header>
+
+  <ion-item>
+    <ion-label>Go</ion-label>
+    <ion-radio checked="true" value="go"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Rust</ion-label>
+    <ion-radio value="rust"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Python</ion-label>
+    <ion-radio value="python" disabled="true"></ion-radio>
+  </ion-item>
+</ion-list>
+
+<ion-item>
+  <ion-range >
+    <ion-icon range-left small name="sunny"></ion-icon>
+    <ion-icon range-right name="sunny"></ion-icon>
+  </ion-range>
+</ion-item>
+
+<h1>search</h1>
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let item of itemsBar">
+      {{ item }}
+    </ion-item>
+</ion-list>
+
 </ion-content>
